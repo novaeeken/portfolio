@@ -1,13 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { GlobalContainer as GlobalContainerComponent } from './global';
 
+const FooterBackground = styled.footer`
+  display: flex;
+  justify-content: center;
+  background-color: ${(props) => props.theme.colors.lightGrey};
+`;
+
+const GlobalContainer = styled(GlobalContainerComponent)`
+  flex-direction: row;
+  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
+  flex-wrap: wrap;
+  padding: 0;
+  transform: translateY(-4rem);
+`;
+
 const Card = styled.section`
-  width: 35rem;
+  max-width: 35rem;
   border-radius: .2rem;
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.black};
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  margin: 0;
+  @media screen and (min-width: 600px) {
+    margin: 0 0 0 2rem;
+  }
   filter: drop-shadow(5px 5px 10px hsla(0, 0%, 70%, .5));
 
   & p {
@@ -19,28 +41,27 @@ const Card = styled.section`
 const CardTitle = styled.h3`
   text-transform: uppercase;
   font-weight: 800;
+  margin: 0;
+`;
+
+const CardSubTitle = styled.p`
+  margin: 0 0 1rem 0;
 `;
 
 const ContactInfo = styled.section`
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.black};
-`;
-
-const FooterBackground = styled.footer`
-  display: flex;
-  justify-content: center;
-  background-color: ${(props) => props.theme.colors.lightGrey};
-`;
-
-const GlobalContainer = styled(GlobalContainerComponent)`
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0;
+  flex-shrink: 0;
+  width: 100%;
+  @media screen and (min-width: 600px) {
+    width: auto;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 4rem;
   font-weight: 800;
+  margin: 1rem 0;
 `;
 
 const EmailTitle = styled.h5`
@@ -55,9 +76,16 @@ const Email = styled(EmailTitle)`
   color: ${(props) => props.theme.colors.black};
 `;
 
-const Favicons = styled.section`
+const Favicons = styled.ul`
   display: flex;
-  justify-items: space-between;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 0;
+`;
+
+const Item = styled.li`
+  display: block;
+  list-style-type: none;
 `;
 
 const Footer = () => (
@@ -68,18 +96,16 @@ const Footer = () => (
         <EmailTitle>Email</EmailTitle>
         <Email>info@novaeeken.com</Email>
         <Favicons>
-          <ul>
-            <li>C</li>
-            <li>L</li>
-            <li>G</li>
-            <li>M</li>
-          </ul>
+          <Item><FontAwesomeIcon icon={['fab', 'codepen']} size="lg" /></Item>
+          <Item><FontAwesomeIcon icon={['fab', 'linkedin-in']} size="lg" /></Item>
+          <Item><FontAwesomeIcon icon={['fab', 'github']} size="lg" /></Item>
+          <Item><FontAwesomeIcon icon={['far', 'envelope']} size="lg" /></Item>
         </Favicons>
       </ContactInfo>
       <Card>
         <CardTitle>Laten we iets speciaals creeeren.</CardTitle>
-        <p>Of een kopje koffie drinken, dat kan natuurlijk ook.</p>
-        <p>Ik ben een frontend developer met een achtergrond in UI/UX Design. Waar ik blij van word is het bouwen van gebruiksvriendelijke interfaces die er ook nog eens prachtig uitzien én technisch goed in elkaar zitten. Je hebt net mijn portfolio bekeken. Meer weten? Je kunt me ook vinden op linkedin, codepen en github.</p>
+        <CardSubTitle>Of een kopje koffie drinken, dat kan natuurlijk ook.</CardSubTitle>
+        <p>Ik ben een frontend developer met een achtergrond in UI/UX Design. Ik bouw gebruiksvriendelijke websites en apps die visueel en technisch tot in de puntjes zijn uitgedacht. Je hebt net mijn portfolio bekeken. Meer weten? Je kunt me ook vinden op linkedin, codepen en github. Of stuur me een mailtje!</p>
       </Card>
     </GlobalContainer>
   </FooterBackground>

@@ -6,7 +6,6 @@ const SubTitle = styled.p`
   color: ${(props) => props.theme.colors.white};
   font-size: 2rem;
   font-weight: 300;
-  line-height: 0;
 `
 
 const JobAlert = () => (

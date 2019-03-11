@@ -13,6 +13,18 @@ const Testimonial = styled.article`
     "section section section";
   width: 21rem;
   filter: drop-shadow(5px 5px 10px hsla(0, 0%, 70%, .5));
+
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    grid-template-rows: 5rem auto 100px 1fr;
+    grid-template-columns: 50px 50px 1fr;
+    grid-template-areas:
+      ". . header"
+      "picture picture header"
+      "picture picture section"
+      ". . section";
+    width: 40rem;
+    margin: 2rem 0;
+  }
 `;
 
 const Img = styled.img`
@@ -48,8 +60,12 @@ const Message = styled.section`
 `;
 
 const Card = styled.div`
-  /*   row-start / column-start / row-end / column-end */
   grid-area: 2 / 1 / 5 / 4;
+
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    grid-area: 1 / 2 / 5 / 4;
+  }
+
   border-radius: .2rem;
   z-index: -1;
   background-color: ${(props) => props.theme.colors.white};
@@ -70,9 +86,13 @@ const Card = styled.div`
 
 const TestimonalsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
   width: 100%;
+  @media screen and (min-width: 1025px) {
+    justify-content: space-between;
+  }
 `;
 
 const testimonialData = [
