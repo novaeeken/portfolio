@@ -5,6 +5,7 @@ import {
   Testimonials,
   JobAlert,
   Footer,
+  Portfolio,
 } from '../components';
 
 const HomePage = () => (
@@ -12,6 +13,7 @@ const HomePage = () => (
     <Header />
     <About />
     <JobAlert />
+    <Portfolio />
     <Testimonials />
     <Footer />
   </Fragment>

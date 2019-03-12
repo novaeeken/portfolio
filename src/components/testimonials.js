@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GlobalContainer, WhiteBackground, SectionTitle } from './global';
+import { GlobalContainer, WhiteBackground } from './global';
+import SectionTitle from './title';
 
 const Testimonial = styled.article`
   display: grid;
@@ -12,6 +13,7 @@ const Testimonial = styled.article`
     "header header header"
     "section section section";
   width: 21rem;
+  margin: 2rem 0;
   filter: drop-shadow(5px 5px 10px hsla(0, 0%, 70%, .5));
 
   @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -23,7 +25,6 @@ const Testimonial = styled.article`
       "picture picture section"
       ". . section";
     width: 40rem;
-    margin: 2rem 0;
   }
 `;
 
@@ -85,6 +86,7 @@ const Card = styled.div`
 `;
 
 const TestimonalsWrapper = styled.div`
+  padding: 0 0 3rem 0;
   display: flex;
   justify-content: center;
   align-content: center;

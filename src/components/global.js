@@ -29,10 +29,4 @@ export const GlobalContainer = styled.div`
   padding: 5rem 0;
 `;
 
-export const SectionTitle = styled.h2`
-  text-transform: uppercase;
-  font-weight: 800;
-  color: ${(props) => props.theme.colors.darkGrey};
-`;
-
 export default null;

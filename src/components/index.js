@@ -1,15 +1,17 @@
-import Header from './header';
 import About from './about';
-import Testimonials from './testimonials';
-import JobAlert from './jobAlert';
 import Footer from './footer';
+import Header from './header';
+import JobAlert from './jobAlert';
+import Portfolio from './portfolio';
+import Testimonials from './testimonials';
 
 export {
-  Header,
   About,
-  Testimonials,
-  JobAlert,
   Footer,
+  Header,
+  JobAlert,
+  Portfolio,
+  Testimonials,
 };
 
 export default null;
