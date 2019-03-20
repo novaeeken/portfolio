@@ -5,16 +5,21 @@ import { YellowGradient, GlobalContainer } from './global';
 
 const Intro = styled.span`
   padding: 7rem 0 0 0;
-  text-align: right;
+  text-align: center;
   color: ${(props) => props.theme.colors.white};
-  border: 1px dotted black;
+  @media screen and (min-width: 600px) {
+    text-align: right;
+  }
 `;
 
 const Title = styled.h1`
   text-transform: uppercase;
   font-weight: 800;
   font-size: 6rem;
-  line-height: 0;
+  line-height: 1;
+  @media screen and (min-width: 600px) {
+    line-height: 0;
+  }
 `;
 
 const Light = styled.span`

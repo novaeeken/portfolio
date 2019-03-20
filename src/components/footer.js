@@ -88,6 +88,13 @@ const Item = styled.li`
   list-style-type: none;
 `;
 
+const Link = styled.a`
+  color: ${(props) => props.theme.colors.black};
+  &:hover, &:visited {
+    color: ${(props) => props.theme.colors.black};
+  }
+`;
+
 const Footer = () => (
   <FooterBackground>
     <GlobalContainer>
@@ -96,10 +103,10 @@ const Footer = () => (
         <EmailTitle>Email</EmailTitle>
         <Email>info@novaeeken.com</Email>
         <Favicons>
-          <Item><FontAwesomeIcon icon={['fab', 'codepen']} size="lg" /></Item>
-          <Item><FontAwesomeIcon icon={['fab', 'linkedin-in']} size="lg" /></Item>
-          <Item><FontAwesomeIcon icon={['fab', 'github']} size="lg" /></Item>
-          <Item><FontAwesomeIcon icon={['far', 'envelope']} size="lg" /></Item>
+          <Item><Link href='https://codepen.io/novaeeken/'><FontAwesomeIcon icon={['fab', 'codepen']} size="lg" /></Link></Item>
+          <Item><Link href='https://www.linkedin.com/in/novaeeken/'><FontAwesomeIcon icon={['fab', 'linkedin-in']} size="lg" /></Link></Item>
+          <Item><Link href='https://www.github.com'><FontAwesomeIcon icon={['fab', 'github']} size="lg" /></Link></Item>
+          <Item><Link href='mailto:info@novaeeken.com?subject=Laten we iets speciaals creeren'><FontAwesomeIcon icon={['far', 'envelope']} size="lg" /></Link></Item>
         </Favicons>
       </ContactInfo>
       <Card>

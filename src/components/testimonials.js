@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { GlobalContainer, WhiteBackground } from './global';
 import SectionTitle from './title';
+import profileJB from '../testimonial_jb.png';
+import profileLC from '../testimonial_lc.png';
+import profileJV from '../testimonial_jv.png';
 
 const Testimonial = styled.article`
   display: grid;
@@ -30,6 +33,10 @@ const Testimonial = styled.article`
 
 const Img = styled.img`
   border-radius: 50%;
+  width: 100px;
+`;
+
+const ImageLink = styled.a`
   grid-area: picture;
 `;
 
@@ -99,25 +106,28 @@ const TestimonalsWrapper = styled.div`
 
 const testimonialData = [
   {
-    author: 'Dr. Piet Pieters',
+    author: 'Dr. Jeroen Benjamins',
     profession: 'Universitair docent',
     company: 'Universiteit Utrecht',
-    message: 'Its nice because the card stretches depending on the length of the text that you place in here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eius explicabo eveniet beatae velit! Consequatur a quisquam excepturi neque culpa facilis laborum, asperiores nulla, dolores, maxime minima iure nisi laboriosam!',
-    image: 'https://placehold.it/100x100',
+    message: 'Ik heb het plezier gehad Nova te mogen begeleiden tijdens haar masterscriptie, waar zij onderzoek deed naar de schaalbaarheid van UX onderzoeksmethoden. Maar veel begeleiding was niet nodig: als Nova iets aanpakt, dan doet ze dat grondig, gedegen en goed. Met haar zelfstandige, intelligente en kritische aanpak is geen probleem te groot.',
+    linkedIn: 'https://www.linkedin.com/in/jeroen-benjamins-18b7864/',
+    image: profileJB,
   },
   {
-    author: 'Dr. Piet Pieters',
-    profession: 'Universitair docent',
-    company: 'Universiteit Utrecht',
-    message: 'Its nice because the card stretches depending on the length of the text that you place in here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eius explicabo eveniet beatae velit! Consequatur a quisquam excepturi neque culpa facilis laborum, asperiores nulla, dolores, maxime minima iure nisi laboriosam!',
-    image: 'https://placehold.it/100x100',
+    author: 'Lloyd Chambier',
+    profession: 'Docent',
+    company: 'NY Code + Design Academy',
+    message: 'From my experience, Nova’s ability to learn, code and deliver functional products are all remarkable. She has a natural drive to solve problems and I have seen first hand that she won\'t stop working on something until a bug has been fixed or a feature has been improved. I would say that overall Nova is definitely one of the best students I\'ve had and I would strongly recommend her for any position.',
+    linkedIn: 'https://www.linkedin.com/in/lloyd-chambrier-b9396870/',
+    image: profileLC,
   },
   {
-    author: 'Dr. Piet Pieters',
-    profession: 'Universitair docent',
-    company: 'Universiteit Utrecht',
-    message: 'Its nice because the card stretches depending on the length of the text that you place in here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eius explicabo eveniet beatae velit! Consequatur a quisquam excepturi neque culpa facilis laborum, asperiores nulla, dolores, maxime minima iure nisi laboriosam!',
-    image: 'https://placehold.it/100x100',
+    author: 'Jasper Volkers',
+    profession: 'Customer Succes Manager',
+    company: 'Contentoo ',
+    message: 'Nova heeft ons geadviseerd op gebied van UI/UX tijdens de development van ons platform. Het resultaat: een goede balans tussen functionaliteiten en gebruiks-vriendelijkheid. Haar werkwijze is professioneel, oplossingsgericht en to the point. Een aanrader voor iedere ondernemer die zijn of haar applicatie naar het volgende level wilt tillen!',
+    linkedIn: 'https://www.linkedin.com/in/jaspervolkers/',
+    image: profileJV,
   },
 ];
 
@@ -127,8 +137,8 @@ const Testimonials = () => (
       <SectionTitle>Testimonials</SectionTitle>
       <TestimonalsWrapper>
         {testimonialData && testimonialData.map(testimonial => (
-          <Testimonial>
-            <Img src={testimonial.image} alt="profile-image" />
+          <Testimonial key={testimonial.author}>
+            <ImageLink href={testimonial.linkedIn}><Img src={testimonial.image} alt="profile-image" /></ImageLink>
             <Header>
               <Author>{testimonial.author}</Author>
               <Profession>{testimonial.profession}<br />@{testimonial.company}</Profession>

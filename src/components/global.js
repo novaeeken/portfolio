@@ -25,7 +25,7 @@ export const GlobalContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px dotted black;
+  /* border: 1px dotted black; */
   padding: 5rem 0;
 `;
 

@@ -52,7 +52,7 @@ const Block = styled.article`
   align-items: center;
   border-radius: 2px;
 	box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
-	background: hsl(36, 100%, 54%);
+	background: hsl(0, 0%, 90%);
   color: hsl(1, 100%, 100%);
   font-size: 2rem;
 `;
@@ -88,13 +88,13 @@ const Portfolio = () => (
     <GlobalContainer>
       <SectionTitle>Portfolio</SectionTitle>
       <PortfolioWrapper>
-        <One>1</One>
-        <Two>2</Two>
-        <Three>3</Three>
-        <Four>4</Four>
-        <Five>5</Five>
-        <Six>6</Six>
-        <Seven>7</Seven>
+        <One>coming soon</One>
+        <Two>coming soon</Two>
+        <Three>coming soon</Three>
+        <Four>coming soon</Four>
+        <Five>coming soon</Five>
+        <Six>coming soon</Six>
+        <Seven>coming soon</Seven>
       </PortfolioWrapper>
     </GlobalContainer>
   </WhiteBackground>
