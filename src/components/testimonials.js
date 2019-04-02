@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { GlobalContainer, WhiteBackground } from './global';
 import SectionTitle from './title';
-import profileJB from '../testimonial_jb.png';
-import profileLC from '../testimonial_lc.png';
-import profileJV from '../testimonial_jv.png';
+import profileJB from '../images/testimonial_jb.png';
+import profileLC from '../images/testimonial_lc.png';
+import profileJV from '../images/testimonial_jv.png';
 
 const Testimonial = styled.article`
   display: grid;
@@ -86,7 +86,7 @@ const Card = styled.div`
     position: absolute;
     top: 100%;
     left: 1.5rem;
-    background-image: linear-gradient(-90deg, #f2ae36, #f57839);
+    background-image: linear-gradient(-90deg, ${(props) => props.theme.colors.yellow}, ${(props) => props.theme.colors.orange});
     width: calc(100% - (1.5rem * 2));
     height: .4rem;
   }

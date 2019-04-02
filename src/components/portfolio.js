@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GlobalContainer, WhiteBackground } from './global';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import DropdownImage from '../images/dropdown.png';
 import SectionTitle from './title';
 
 const PortfolioWrapper = styled.div`
@@ -55,32 +57,65 @@ const Block = styled.article`
 	background: hsl(0, 0%, 90%);
   color: hsl(1, 100%, 100%);
   font-size: 2rem;
+  overflow: hidden;
+  position: relative;
+`;
+
+const Description = styled.section`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  background-color: hsla(136, 0%, 100%, 0.55);
+  color: ${(props) => props.theme.colors.black};
+  p {
+    padding-left: 1rem;
+  }
 `;
 
 const One = styled(Block)`
   grid-area: one;
+  background-color: hsl(126, 77%, 78%);
 `;
+
 const Two = styled(Block)`
   grid-area: two;
+  background-color: hsl(335, 57%, 46%);
 `;
+
 const Three = styled(Block)`
   grid-area: three;
+  background-color: hsl(39, 92%, 70%);
 `;
 
 const Four = styled(Block)`
   grid-area: four;
+  background-color: coral;
 `;
 
 const Five = styled(Block)`
   grid-area: five;
+  background-color: orange;
 `;
 
 const Six = styled(Block)`
   grid-area: six;
+  background-color: hsl(239, 28%, 69%);
 `;
 
 const Seven = styled(Block)`
   grid-area: seven;
+`;
+
+const PortfolioImage = styled.img`
+  width: 100%;
 `;
 
 const Portfolio = () => (
@@ -88,13 +123,47 @@ const Portfolio = () => (
     <GlobalContainer>
       <SectionTitle>Portfolio</SectionTitle>
       <PortfolioWrapper>
-        <One>coming soon</One>
-        <Two>coming soon</Two>
-        <Three>coming soon</Three>
-        <Four>coming soon</Four>
-        <Five>coming soon</Five>
-        <Six>coming soon</Six>
-        <Seven>coming soon</Seven>
+        <One>
+          coming soon...
+          <Description>
+            <FontAwesomeIcon icon={['fab', 'github']} size="lg" />
+            <p>Wat eten we vanavond - webapp</p>
+          </Description>
+        </One>
+        <Two>
+          <Description>
+            <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
+            <p>Hamburger menu</p>
+          </Description>
+        </Two>
+        <Three>
+          <Description>
+            <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
+            <p>Loading screen</p>
+          </Description>
+        </Three>
+        <Four>
+          {/* <PortfolioImage src={DropdownImage} alt='animated dropdown'/> */}
+          <Description>
+            <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
+            <p>Animated dropdown</p>
+          </Description>
+        </Four>
+        <Five>
+          <Description>
+            <FontAwesomeIcon icon={['fab', 'adobe']} size="lg" />
+            <p>Tightasses</p>
+          </Description>
+        </Five>
+        <Six>
+        <Description>
+          <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
+          <p>Loaders</p>
+        </Description>
+        </Six>
+        <Seven>
+          coming soon...
+        </Seven>
       </PortfolioWrapper>
     </GlobalContainer>
   </WhiteBackground>

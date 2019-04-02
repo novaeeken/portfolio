@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProfilePicture from '../nova.png';
+import ProfilePicture from '../images/nova.png';
 import { YellowGradient, GlobalContainer } from './global';
 
 const Intro = styled.span`
