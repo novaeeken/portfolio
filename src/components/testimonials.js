@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../backToOrigin.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { GlobalContainer, WhiteBackground } from './global';
 import SectionTitle from './title';
 import profileJB from '../images/testimonial_jb.png';
 import profileLC from '../images/testimonial_lc.png';
 import profileJV from '../images/testimonial_jv.png';
 
-const Testimonial = styled.article`
+const Testimonial = styled(ScrollAnimation)`
   display: grid;
   grid-template-rows: 50px 50px auto 1fr;
   grid-template-columns: 1fr 100px 1fr;
@@ -18,6 +20,11 @@ const Testimonial = styled.article`
   width: 21rem;
   margin: 2rem 0;
   filter: drop-shadow(5px 5px 10px hsla(0, 0%, 70%, .5));
+
+  /* Animated fade in */
+	transform: translate(0,4rem);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
 
   @media screen and (min-width: 600px) and (max-width: 1024px) {
     grid-template-rows: 5rem auto 100px 1fr;
@@ -104,6 +111,7 @@ const TestimonalsWrapper = styled.div`
   }
 `;
 
+// @todo: should come from contentful
 const testimonialData = [
   {
     author: 'Dr. Jeroen Benjamins',
@@ -137,7 +145,13 @@ const Testimonials = () => (
       <SectionTitle>Testimonials</SectionTitle>
       <TestimonalsWrapper>
         {testimonialData && testimonialData.map(testimonial => (
-          <Testimonial key={testimonial.author}>
+          <Testimonial
+            animateIn="backToOrigin"
+            duration={.6}
+            animateOnce
+            delay={testimonialData.indexOf(testimonial) * 300}
+            key={testimonial.author}
+          >
             <ImageLink href={testimonial.linkedIn}><Img src={testimonial.image} alt="profile-image" /></ImageLink>
             <Header>
               <Author>{testimonial.author}</Author>

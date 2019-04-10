@@ -1,7 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
+import '../backToOrigin.css';
 import ProfilePicture from '../images/nova.png';
 import { YellowGradient, GlobalContainer } from './global';
+
+const FadeInLeft = styled(ScrollAnimation)`
+	transform: translate(4rem, 0);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+`;
+
+const FadeInRight = styled(ScrollAnimation)`
+	transform: translate(-4rem, 0);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+`;
 
 const Intro = styled.span`
   padding: 7rem 0 0 0;
@@ -17,6 +31,7 @@ const Title = styled.h1`
   font-weight: 800;
   font-size: 6rem;
   line-height: 1;
+
   @media screen and (min-width: 600px) {
     line-height: 0;
   }
@@ -44,8 +59,12 @@ const Header = () => (
   <YellowGradient>
     <GlobalContainer>
       <Intro>
-        <Title>Nova <Light>Eeken</Light></Title>
-        <SubTitle>frontend developer </SubTitle>
+        <FadeInLeft animateIn="backToOrigin">
+          <Title>Nova <Light>Eeken</Light></Title>
+        </FadeInLeft>
+        <FadeInRight animateIn="backToOrigin">
+          <SubTitle>frontend developer </SubTitle>
+        </FadeInRight>
       </Intro>
       <Photo src={ProfilePicture} alt="Profile picture"/>
     </GlobalContainer>

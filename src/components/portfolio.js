@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { GlobalContainer, WhiteBackground } from './global';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import DropdownImage from '../images/dropdown.png';
 import SectionTitle from './title';
 
 const PortfolioWrapper = styled.div`
@@ -114,10 +113,6 @@ const Seven = styled(Block)`
   grid-area: seven;
 `;
 
-const PortfolioImage = styled.img`
-  width: 100%;
-`;
-
 const Portfolio = () => (
   <WhiteBackground>
     <GlobalContainer>
@@ -143,7 +138,6 @@ const Portfolio = () => (
           </Description>
         </Three>
         <Four>
-          {/* <PortfolioImage src={DropdownImage} alt='animated dropdown'/> */}
           <Description>
             <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
             <p>Animated dropdown</p>
