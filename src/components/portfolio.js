@@ -70,7 +70,6 @@ const Description = styled.section`
   align-items: center;
   font-size: 1rem;
   padding: 0 1rem;
-  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   background-color: hsla(136, 0%, 100%, 0.55);
   color: ${(props) => props.theme.colors.black};
@@ -81,79 +80,94 @@ const Description = styled.section`
 
 const One = styled(Block)`
   grid-area: one;
-  background-color: hsl(126, 77%, 78%);
+  /* background-color: hsl(126, 77%, 78%); */
 `;
 
 const Two = styled(Block)`
   grid-area: two;
-  background-color: hsl(335, 57%, 46%);
+  /* background-color: hsl(335, 57%, 46%); */
 `;
 
 const Three = styled(Block)`
   grid-area: three;
-  background-color: hsl(39, 92%, 70%);
+  /* background-color: hsl(39, 92%, 70%); */
 `;
 
 const Four = styled(Block)`
   grid-area: four;
-  background-color: coral;
+  /* background-color: coral; */
 `;
 
 const Five = styled(Block)`
   grid-area: five;
-  background-color: orange;
+  /* background-color: orange; */
 `;
 
 const Six = styled(Block)`
   grid-area: six;
-  background-color: hsl(239, 28%, 69%);
+  /* background-color: hsl(239, 28%, 69%); */
 `;
 
 const Seven = styled(Block)`
   grid-area: seven;
 `;
 
+const Disclaimer = styled.p`
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  & a, a:visited {
+    color: ${(props) => props.theme.colors.orange};
+  }
+
+`;
+
 const Portfolio = () => (
   <WhiteBackground>
     <GlobalContainer>
       <SectionTitle>Portfolio</SectionTitle>
+      <Disclaimer>Een gedetailleerde showcase van mijn portfolio is in de maak. Voor nu kun je een groot gedeelte vinden op <a href="https://codepen.io/novaeeken/">Codepen</a>.</Disclaimer>
       <PortfolioWrapper>
         <One>
           coming soon...
-          <Description>
+          {/* <Description>
             <FontAwesomeIcon icon={['fab', 'github']} size="lg" />
             <p>Wat eten we vanavond - webapp</p>
-          </Description>
+          </Description> */}
         </One>
         <Two>
-          <Description>
+          coming soon...
+          {/* <Description>
             <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
             <p>Hamburger menu</p>
-          </Description>
+          </Description> */}
         </Two>
         <Three>
-          <Description>
+          coming soon...
+          {/* <Description>
             <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
             <p>Loading screen</p>
-          </Description>
+          </Description> */}
         </Three>
         <Four>
-          <Description>
+          coming soon...
+          {/* <Description>
             <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
             <p>Animated dropdown</p>
-          </Description>
+          </Description> */}
         </Four>
         <Five>
-          <Description>
+          coming soon...
+          {/* <Description>
             <FontAwesomeIcon icon={['fab', 'adobe']} size="lg" />
             <p>Tightasses</p>
-          </Description>
+          </Description> */}
         </Five>
         <Six>
-        <Description>
+        coming soon...
+        {/* <Description>
           <FontAwesomeIcon icon={['fab', 'codepen']} size="lg" />
           <p>Loaders</p>
-        </Description>
+        </Description> */}
         </Six>
         <Seven>
           coming soon...
