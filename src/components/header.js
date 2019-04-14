@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
-import '../index.css';
+// import '../index.css';
+import "animate.css/animate.min.css";
 import ProfilePicture from '../images/nova.png';
 import { YellowGradient, GlobalContainer } from './global';
 
-const FadeInLeft = styled(ScrollAnimation)`
-	transform: translate(4rem, 0);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
-`;
+// const FadeInLeft = styled(ScrollAnimation)`
+// 	transform: translate(4rem, 0);
+//   opacity: 0;
+//   transition: transform 1s ease, opacity 1s ease;
+// `;
 
-const FadeInRight = styled(ScrollAnimation)`
-	transform: translate(-4rem, 0);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
-`;
+// const FadeInRight = styled(ScrollAnimation)`
+// 	transform: translate(-4rem, 0);
+//   opacity: 0;
+//   transition: transform 1s ease, opacity 1s ease;
+// `;
 
 const Intro = styled.span`
   padding: 7rem 0 0 0;
@@ -59,12 +60,12 @@ const Header = () => (
   <YellowGradient>
     <GlobalContainer>
       <Intro>
-        <FadeInLeft animateIn="backToOrigin">
+        <ScrollAnimation animateIn="fadeInRight">
           <Title>Nova <Light>Eeken</Light></Title>
-        </FadeInLeft>
-        <FadeInRight animateIn="backToOrigin">
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInLeft">
           <SubTitle>frontend developer </SubTitle>
-        </FadeInRight>
+        </ScrollAnimation>
       </Intro>
       <Photo src={ProfilePicture} alt="Profile picture"/>
     </GlobalContainer>

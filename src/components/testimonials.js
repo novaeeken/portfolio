@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../index.css';
+// import '../index.css';
 import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 import { GlobalContainer, WhiteBackground } from './global';
 import SectionTitle from './title';
 import profileJB from '../images/testimonial_jb.png';
@@ -22,9 +23,9 @@ const Testimonial = styled(ScrollAnimation)`
   filter: drop-shadow(5px 5px 10px hsla(0, 0%, 70%, .5));
 
   /* Animated fade in */
-	transform: translate(0,4rem);
+	/* transform: translate(0,4rem);
   opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
+  transition: transform 1s ease, opacity 1s ease; */
 
   @media screen and (min-width: 600px) and (max-width: 1024px) {
     grid-template-rows: 5rem auto 100px 1fr;
@@ -146,12 +147,11 @@ const Testimonials = () => (
       <TestimonalsWrapper>
         {testimonialData && testimonialData.map(testimonial => (
           <Testimonial
-            animateIn="red"
+            animateIn="fadeInUp"
             duration={.6}
             animateOnce
             delay={testimonialData.indexOf(testimonial) * 300}
             key={testimonial.author}
-            className=""
           >
             <ImageLink href={testimonial.linkedIn}><Img src={testimonial.image} alt="profile-image" /></ImageLink>
             <Header>
