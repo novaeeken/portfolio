@@ -146,7 +146,7 @@ const Testimonials = () => (
       <TestimonalsWrapper>
         {testimonialData && testimonialData.map(testimonial => (
           <Testimonial
-            animateIn="backToOrigin"
+            animateIn="red"
             duration={.6}
             animateOnce
             delay={testimonialData.indexOf(testimonial) * 300}

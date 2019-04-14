@@ -15,6 +15,8 @@ class App extends Component {
   render() {
     return (
       <Fragment>
+          <div className="red">
+          halooooooooooooooo </div>
           <GlobalStyles />
           <HomePage />
       </Fragment>
