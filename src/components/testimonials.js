@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../backToOrigin.css';
+import '../index.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { GlobalContainer, WhiteBackground } from './global';
 import SectionTitle from './title';
@@ -151,6 +151,7 @@ const Testimonials = () => (
             animateOnce
             delay={testimonialData.indexOf(testimonial) * 300}
             key={testimonial.author}
+            className=""
           >
             <ImageLink href={testimonial.linkedIn}><Img src={testimonial.image} alt="profile-image" /></ImageLink>
             <Header>
