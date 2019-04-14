@@ -106,7 +106,7 @@ const Footer = () => (
           <Item><Link href='https://codepen.io/novaeeken/'><FontAwesomeIcon icon={['fab', 'codepen']} size="lg" /></Link></Item>
           <Item><Link href='https://www.linkedin.com/in/novaeeken/'><FontAwesomeIcon icon={['fab', 'linkedin-in']} size="lg" /></Link></Item>
           <Item><Link href='https://www.github.com'><FontAwesomeIcon icon={['fab', 'github']} size="lg" /></Link></Item>
-          <Item><Link href='mailto:info@novaeeken.com?subject=Laten we iets speciaals creeren'><FontAwesomeIcon icon={['far', 'envelope']} size="lg" /></Link></Item>
+          <Item><Link href='mailto:nova_eeken@hotmail.com?subject=Laten we iets speciaals creeren'><FontAwesomeIcon icon={['far', 'envelope']} size="lg" /></Link></Item>
         </Favicons>
       </ContactInfo>
       <Card>

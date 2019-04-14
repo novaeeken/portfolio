@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GlobalContainer, WhiteBackground } from './global';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SectionTitle from './title';
 
 const PortfolioWrapper = styled.div`
@@ -60,23 +60,23 @@ const Block = styled.article`
   position: relative;
 `;
 
-const Description = styled.section`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  padding: 0 1rem;
-  font-weight: 600;
-  background-color: hsla(136, 0%, 100%, 0.55);
-  color: ${(props) => props.theme.colors.black};
-  p {
-    padding-left: 1rem;
-  }
-`;
+// const Description = styled.section`
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   z-index: 1;
+//   display: flex;
+//   align-items: center;
+//   font-size: 1rem;
+//   padding: 0 1rem;
+//   font-weight: 600;
+//   background-color: hsla(136, 0%, 100%, 0.55);
+//   color: ${(props) => props.theme.colors.black};
+//   p {
+//     padding-left: 1rem;
+//   }
+// `;
 
 const One = styled(Block)`
   grid-area: one;
