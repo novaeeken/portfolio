@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 import App from './App';
-import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

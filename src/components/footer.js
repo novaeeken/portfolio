@@ -61,6 +61,7 @@ const ContactInfo = styled.section`
 const Title = styled.h1`
   font-size: 4rem;
   font-weight: 800;
+  line-height: 1.5;
   margin: 1rem 0;
 `;
 

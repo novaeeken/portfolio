@@ -1,8 +1,8 @@
-// import { GlobalStyles } from './globalstyles';
+import { GlobalStyle } from './globalStyle';
 import { theme } from './theme';
 
 export {
-  // GlobalStyles,
+  GlobalStyle,
   theme,
 };
 

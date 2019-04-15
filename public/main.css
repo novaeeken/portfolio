@@ -1,5 +1,0 @@
-.backToOrigin {
-  transform: translate(0,0);
-	opacity: 1;
-	transition: transform 1s ease, opacity 1s ease;
-}
