@@ -22,11 +22,6 @@ const Testimonial = styled(ScrollAnimation)`
   margin: 2rem 0;
   filter: drop-shadow(5px 5px 10px hsla(0, 0%, 70%, .5));
 
-  /* Animated fade in */
-	/* transform: translate(0,4rem);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease; */
-
   @media screen and (min-width: 600px) and (max-width: 1024px) {
     grid-template-rows: 5rem auto 100px 1fr;
     grid-template-columns: 50px 50px 1fr;
