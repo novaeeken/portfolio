@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
 // import '../index.css';
-import "animate.css/animate.min.css";
+import 'animate.css/animate.min.css';
 import ProfilePicture from '../images/nova.png';
 import { YellowGradient, GlobalContainer } from './global';
 
