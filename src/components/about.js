@@ -25,7 +25,7 @@ const Highlight = styled.h2`
 const Description = styled.p`
   line-height: 1.7;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
 `;
 
 const About = () => (

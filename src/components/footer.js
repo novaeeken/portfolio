@@ -40,7 +40,7 @@ const Card = styled.section`
 
 const CardTitle = styled.h3`
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
   margin: 0;
 `;
 
