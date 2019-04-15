@@ -1,21 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Codepen from 'react-codepen-embed';
 import { GlobalContainer, WhiteBackground } from './global';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SectionTitle from './title';
-
-const CodepenEmbedded = () => {
-  return (
-    <Codepen
-      hash="mvoeOo"
-      user="novaeeken"
-      defaultTab="result"
-      title="Animated hamburger menu"
-      loader={() => <div>Loading...</div>}
-    />
-  );
-}
 
 const PortfolioWrapper = styled.div`
   padding: 3rem 0 0;
@@ -186,7 +173,6 @@ const Portfolio = () => (
           coming soon...
         </Seven>
       </PortfolioWrapper>
-      <CodepenEmbedded />
     </GlobalContainer>
   </WhiteBackground>
 );
